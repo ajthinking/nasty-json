@@ -62,6 +62,26 @@ describe("JSONParser", () => {
       expect(output).toEqual(expectedOutput);
     });    
 
+    test("parses an array with trailing commas", () => {
+      const input = '[1,]';
+      const expectedOutput = [1];
+
+      const parser = new JSONParser(input);
+
+      const output = parser.parse();
+      expect(output).toEqual(expectedOutput);
+    });
+
+    test("parses objects with trailing commas", () => {
+      const input = '{"a": 1,}';
+      const expectedOutput = { a: 1 };
+
+      const parser = new JSONParser(input);
+
+      const output = parser.parse();
+      expect(output).toEqual(expectedOutput);
+    });    
+
     test("parses an object with numeric values", () => {
       const input = '{"age": 30, "height": 1.8}';
       const expectedOutput = { age: 30, height: 1.8 };
@@ -155,6 +175,14 @@ describe("JSONParser", () => {
 
       expect(() => parser.parse()).toThrowError();
     });
+
+    test("throws an error for unqoted string values", () => {
+      const input = '{ "name": ajthinking }';
+
+      const parser = new JSONParser(input);
+
+      expect(() => parser.parse()).toThrowError();
+    });    
 
     test("throws an error for incomplete input", () => {
       const input = '{"name": "John", "city":';

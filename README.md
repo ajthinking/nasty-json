@@ -1,10 +1,10 @@
 # Nasty JSON 🤪
-A parser for JSON and JSON-like syntax:
+A JSON-like parser:
 ```
 {
   unqoted: "ok",
-  user name: "ajthinking",
-  'singles': 'are ok',
+  with spaces: "sure",
+  'singles': 'right',
   "doubles": 'as usual',
 }
 ```
