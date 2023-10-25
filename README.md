@@ -7,7 +7,12 @@ Allows JSON-like syntax:
   'singles': 'are ok',
   "doubles": 'as usual',
 }
-``` 
+```
+
+### Usage
+```ts
+NastyJSON.parse(dirt) // 😎
+```
 
 ### Acknowledgments
 Adapted from a regular JSON-parser in [this repo](https://github.com/mzbac/JSON-parser)

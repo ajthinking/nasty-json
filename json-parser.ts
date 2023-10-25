@@ -2,6 +2,10 @@ type JSONValue = string | number | boolean | null | JSONObject | JSONArray;
 type JSONObject = { [key: string]: JSONValue };
 type JSONArray = JSONValue[];
 
+export const NastyJSON = {
+  parse: (input: any) => new JSONParser(input).parse()
+}
+
 export class JSONParser {
   private pos = 0;
   private input: string;
