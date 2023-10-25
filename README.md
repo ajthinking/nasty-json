@@ -1,5 +1,5 @@
 # Nasty JSON 🤪
-Allows JSON-like syntax:
+A parser for JSON and JSON-like syntax:
 ```
 {
   unqoted: "ok",
