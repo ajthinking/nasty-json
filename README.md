@@ -1,7 +1,17 @@
-# Writing a JSON Parser in TypeScript
+# Nasty JSON 🤪
+Allows kind of valid JSON syntax like:
+```
+{
+  unqoted: "value",
+  also this one: "with spaces in the key",
+  'singles': 'are ok'
+}
+``` 
 
-This is the repository for the Medium blog post on writing a JSON parser in TypeScript. In the blog post, we walk through the process of writing a JSON parser from scratch and explain each step along the way.
+### Acknowledgments
+Adapted from a regular JSON-parser in [this repo](https://github.com/mzbac/JSON-parser)
 
-If you'd like to see the full implementation of the JSON parser in TypeScript, The `json-parser.ts` file contains the main parser code, and the `json-parser.test.ts` file contains the unit tests.
+See also [dirty-json](https://github.com/RyanMarcus/dirty-json)
 
-I hope this repository is helpful to you in understanding how JSON parsing works and how to write your own JSON parser in TypeScript or any other language.
+### License
+MIT
