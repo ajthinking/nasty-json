@@ -1,10 +1,11 @@
 # Nasty JSON 🤪
-Allows kind of valid JSON syntax like:
+Allows JSON-like syntax:
 ```
 {
-  unqoted: "value",
-  also this one: "with spaces in the key",
-  'singles': 'are ok'
+  unqoted: "ok",
+  user name: "ajthinking",
+  'singles': 'are ok',
+  "doubles": 'as usual',
 }
 ``` 
 
